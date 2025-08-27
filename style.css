@@ -1,20 +1,19 @@
 main {
     display: flex;
-    width: 50%;
+    flex-direction: row;
 }
-
+main>section{
+    flex: 1;
+}
 p {
     color: rgb(167, 167, 167);
     font-size: 25px;
-    position: absolute;
-    top: 80px;
 }
 
 #leftSide {
     display: block;
     margin: 0 auto;
-    position: relative;
-    top: 100px;
+
 }
 
 h1 {
@@ -27,13 +26,6 @@ input {
     border: 1px solid rgb(238, 238, 238);
     padding: 16px 190px 16px 10px;
 }
-
-#rightSide img {
-    position: absolute;
-    width: 50%;
-    height: 99%;
-}
-
 label {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
@@ -44,9 +36,6 @@ div {
 }
 
 button {
-    position: absolute;
-    left: 13.5%;
-    bottom: 20%;
     background-color: rgb(97, 69, 158);
     color: white;
     border: none;
@@ -59,10 +48,9 @@ button {
 button:hover {
     background-color: rgba(97, 69, 158, 0.767);
 }
-
-#underButtomPara {
-    font-size: 20px;
-    position: absolute;
-    top: 80%;
-    left: 16%;
+@media(max-width:700px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
